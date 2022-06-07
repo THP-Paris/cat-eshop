@@ -24,3 +24,4 @@ Things you may want to cover:
 * ...
 
 On crée un conflit car trop d'amour pour la modification de Readme
+Ce serait bien de rédiger ce Readme
