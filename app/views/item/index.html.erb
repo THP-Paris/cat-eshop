@@ -1,5 +1,4 @@
-<h1>Item#index</h1>
-<p>Find me in app/views/item/index.html.erb</p>
+<h1>Home page </h1>
 
 <% @items.each do | item | %>
 
@@ -8,11 +7,10 @@
 Description : <%= item.description %></br>
 
 
-Prix : <%= item.price %>  </br>  </br>
+Prix : <%= item.price %> € </br>  </br>
 
+<img src="https://source.unsplash.com/250x250/?kitten?sig=<%=rand(1..50)%>" class="img-fluid"> </br>
 
-<%= link_to "En voir plus", item_path(item.id) %>
-
+<%= link_to "En savoir plus", item_path(item.id) %></br>
+</br>
     <% end %>
-
-  
