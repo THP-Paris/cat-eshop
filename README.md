@@ -23,4 +23,10 @@ Things you may want to cover:
 
 * ...
 
+On crée un conflit car trop d'amour pour la modification de Readme
+<<<<<<< HEAD
 Ce serait bien de rédiger ce Readme
+=======
+
+version 2 de la modification
+>>>>>>> d675fae (modif #2 du readme)
