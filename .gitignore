@@ -1,0 +1,37 @@
+#   git config --global core.excludesfile '~/.gitignore_global'
+# Ignore bundler config.
+/.bundle
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+# Ignore uploaded files in development
+/storage/*
+/node_modules
+/yarn-error.log
+/public/assets
+.byebug_history
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+coverage
+.DS_Store
+dump.rdb
+# Ignore application configuration
+/config/application.yml
+# Ignore application saves
+/stockage.rb
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+/.env
+#Yarn specifics
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+# Ignore Jetbrain's IDE config files
+.idea
