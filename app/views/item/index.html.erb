@@ -1,2 +1,18 @@
 <h1>Item#index</h1>
 <p>Find me in app/views/item/index.html.erb</p>
+
+<% @items.each do | item | %>
+
+   Titre : <%= item.title %> </br>
+
+Description : <%= item.description %></br>
+
+
+Prix : <%= item.price %>  </br>  </br>
+
+
+<%= link_to "En voir plus", item_path(item.id) %>
+
+    <% end %>
+
+  
