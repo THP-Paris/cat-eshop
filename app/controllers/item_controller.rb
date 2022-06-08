@@ -1,6 +1,7 @@
 class ItemController < ApplicationController
   def index
     @items = Item.all
+    @join_table_item_cart = JoinTableItemsCart.new
   end
 
   def new
@@ -14,5 +15,8 @@ class ItemController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @join_table_item_cart = JoinTableItemsCart.new
+
+  
   end 
 end

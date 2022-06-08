@@ -1,5 +1,21 @@
 <h1>Home page </h1>
 
+<% flash.each do |type, msg| %>
+   <div>
+     <%= msg %>
+   </div>
+ <% end %>
+
+<% if user_signed_in? %>
+<%= link_to "se déconnecter", destroy_user_session_path, method: :delete %> 
+<% end %></br>
+
+<% if user_signed_in? %>
+
+<%= link_to "voir mon panier", cart_path(current_user.id)%> 
+<% end %></br>
+</br>
+
 <% @items.each do | item | %>
 
    Titre : <%= item.title %> </br>
@@ -12,5 +28,16 @@ Prix : <%= item.price %> € </br>  </br>
 <img src="https://source.unsplash.com/250x250/?kitten?sig=<%=rand(1..50)%>" class="img-fluid"> </br>
 
 <%= link_to "En savoir plus", item_path(item.id) %></br>
+
+<% if user_signed_in? %>
+    <%= form_for @join_table_item_cart do |f| %>
+        
+        <%= f.hidden_field :item_id, value: item.id %>
+        <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+       
+        <button type="submit" class="btn btn-success">Ajouter au panier</button>
+    <% end %>
+<% end %>
+
 </br>
     <% end %>
