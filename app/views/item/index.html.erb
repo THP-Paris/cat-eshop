@@ -90,12 +90,12 @@ Prix : <%= item.price %> € </br>  </br>
                                     <!-- Product description-->
                                     <%= item.description %>
                                     <!-- Product price-->
-                                    <%= item.price %> €
+                                    <p><%= item.price %> €</p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="<%= item_path(item.id) %>">View details</a></div>
                                 <!-- <%= link_to "En savoir plus", item_path(item.id) %> -->
                                 <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
                             </div>
