@@ -1,0 +1,17 @@
+current directory: /Users/brianvariengien/Desktop/THP/cat-eshop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+/Users/brianvariengien/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/brianvariengien/.rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0 -r ./siteconf20220607-79935-b0r3n2.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/brianvariengien/Desktop/THP/cat-eshop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\= clean
+
+current directory: /Users/brianvariengien/Desktop/THP/cat-eshop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\=
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/brianvariengien/Desktop/THP/cat-eshop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20220607-79935-zsbku2/racc
