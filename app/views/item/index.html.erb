@@ -30,7 +30,7 @@
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">CAT-ESHOP</h1>
+                    <h1 class="display-4 fw-bolder">Cat-eshop</h1>
                     <p class="lead fw-normal text-white-50 mb-0">find your perfect cat portrait</p>
                 </div>
             </div>
@@ -41,16 +41,6 @@
      <%= msg %>
    </div>
  <% end %>
-
-<% if user_signed_in? %>
-<%= link_to "se déconnecter", destroy_user_session_path, method: :delete %> 
-<% end %></br>
-
-<% if user_signed_in? %>
-
-<%= link_to "voir mon panier", cart_path(current_user.id)%> 
-<% end %></br>
-</br>
 
 
 
