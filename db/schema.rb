@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_09_081918) do
+ActiveRecord::Schema.define(version: 2022_06_09_083251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 2022_06_09_081918) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "join_table_item_orders", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_join_table_item_orders_on_item_id"
+    t.index ["order_id"], name: "index_join_table_item_orders_on_order_id"
   end
 
   create_table "join_table_items_carts", force: :cascade do |t|
@@ -61,6 +70,8 @@ ActiveRecord::Schema.define(version: 2022_06_09_081918) do
   end
 
   add_foreign_key "carts", "users"
+  add_foreign_key "join_table_item_orders", "items"
+  add_foreign_key "join_table_item_orders", "orders"
   add_foreign_key "join_table_items_carts", "carts"
   add_foreign_key "join_table_items_carts", "items"
   add_foreign_key "orders", "carts"
