@@ -5875,6 +5875,7 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "laura4@yopmail.com"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
@@ -7036,3 +7037,5 @@ Processing by OrdersController#show as HTML
 Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
 
 
+=======
+>>>>>>> ccee8232230fa3fc0d93d1cb955a92fff85861df
