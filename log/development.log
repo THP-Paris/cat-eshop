@@ -5875,3 +5875,1167 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "laura4@yopmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2022-06-09 17:07:51 +0200
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 520ms (Views: 491.9ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:07:52 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for ::1 at 2022-06-09 17:07:54 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C7K3t5RvyzNKU4eWvq7Aq3xTt47qnn9UEghyLL/EISmkVuW8QUC4N5F4I48cqbq1CJ5NWmJnQYonGY/HfHtEuA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 497ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:07:54 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  Rendered item/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:07:55 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-06-09 17:08:00 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.2ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2022-06-09 17:08:06 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oqi/Qd5QdO5W1PSi7P9yS7LXD2dizmp5RWUqGHWvnUTVBeWOFgOWvMgVB5O2DkDIHUCT26WDIc28KG06SjUm0w==", "user"=>{"email"=>"laura45@yopmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "laura45@yopmail.com"], ["LIMIT", 1]]
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "laura45@yopmail.com"], ["encrypted_password", "$2a$12$VfqvRPpDTt9CmuoU03nmI.2ZuQUofCpF5XtVj1Tv1CcRTNEaJ7ltq"], ["created_at", "2022-06-09 15:08:06.976004"], ["updated_at", "2022-06-09 15:08:06.976004"]]
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCart Create (2.3ms)[0m  [1m[32mINSERT INTO "carts" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 3], ["created_at", "2022-06-09 15:08:06.983819"], ["updated_at", "2022-06-09 15:08:06.983819"]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/helpers/application_helper.rb:4
+Completed 302 Found in 237ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:08:06 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:08:07 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/join_table_items_carts" for ::1 at 2022-06-09 17:08:09 +0200
+Processing by JoinTableItemsCartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Ke07WGwCSqBAWVBAjtYU1ZckgkhL6Ak23mmmcCwz/anCu4iqePreB/AlnBYymrQ+csOteZi65AiNOG7/yp0YQ==", "join_table_items_cart"=>{"item_id"=>"1", "cart_id"=>"3"}}
+  [1m[36mJoinTableItemsCart Load (0.5ms)[0m  [1m[34mSELECT  "join_table_items_carts".* FROM "join_table_items_carts" WHERE "join_table_items_carts"."cart_id" = $1 AND "join_table_items_carts"."item_id" = $2 LIMIT $3[0m  [["cart_id", 3], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/models/join_table_items_cart.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[36mJoinTableItemsCart Create (1.8ms)[0m  [1m[32mINSERT INTO "join_table_items_carts" ("item_id", "cart_id", "quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["item_id", 1], ["cart_id", 3], ["quantity", 1], ["created_at", "2022-06-09 15:08:09.552844"], ["updated_at", "2022-06-09 15:08:09.552844"]]
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/join_table_items_cart.rb:7
+Redirected to http://localhost:3000/
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 302 Found in 19ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:08:09 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:08:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/join_table_items_carts" for ::1 at 2022-06-09 17:08:11 +0200
+Processing by JoinTableItemsCartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a+nCggyiNMXK0HNb8i9hbI1TByccfqNh0SwTSs+VCsQcRJhNxPHWl1QRgGqo3lPvIsSbm9sz6NUoYVRo8A+xUw==", "join_table_items_cart"=>{"item_id"=>"2", "cart_id"=>"3"}}
+  [1m[36mJoinTableItemsCart Load (0.7ms)[0m  [1m[34mSELECT  "join_table_items_carts".* FROM "join_table_items_carts" WHERE "join_table_items_carts"."cart_id" = $1 AND "join_table_items_carts"."item_id" = $2 LIMIT $3[0m  [["cart_id", 3], ["item_id", 2], ["LIMIT", 1]]
+  ↳ app/models/join_table_items_cart.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[36mJoinTableItemsCart Create (0.7ms)[0m  [1m[32mINSERT INTO "join_table_items_carts" ("item_id", "cart_id", "quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["item_id", 2], ["cart_id", 3], ["quantity", 1], ["created_at", "2022-06-09 15:08:12.007348"], ["updated_at", "2022-06-09 15:08:12.007348"]]
+  ↳ app/models/join_table_items_cart.rb:7
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/join_table_items_cart.rb:7
+Redirected to http://localhost:3000/
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 302 Found in 14ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:08:12 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (3.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:08:12 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carts/3" for ::1 at 2022-06-09 17:08:13 +0200
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:11
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mJoinTableItemsCart Load (0.2ms)[0m  [1m[34mSELECT "join_table_items_carts".* FROM "join_table_items_carts" WHERE "join_table_items_carts"."cart_id" = $1[0m  [["cart_id", 3]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:24
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:24
+  Rendered carts/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 46ms (Views: 33.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/orders" for ::1 at 2022-06-09 17:08:14 +0200
+Processing by OrdersController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mOrder Create (1.4ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2022-06-09 15:08:14.949724"], ["updated_at", "2022-06-09 15:08:14.949724"], ["user_id", 3]]
+  ↳ app/controllers/orders_controller.rb:28
+  Rendering user_mailer/order_confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/order_confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.text.erb within layouts/mailer (0.5ms)
+UserMailer#order_confirmation: processed outbound mail in 36.4ms
+Sent mail to laura45@yopmail.com (333.1ms)
+Date: Thu, 09 Jun 2022 17:08:15 +0200
+From: no-reply@monsite.fr
+To: laura45@yopmail.com
+Message-ID: <62a20cdfb4b_15ede4b8c99687@mbp-de-eva.home.mail>
+Subject: merci pour ta commande bro
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62a20cdef3607_15ede4b8c9956a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62a20cdef3607_15ede4b8c9956a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIzxVc2VyOjB4MDAwMDdmZTZlY2I4OTViOD4gZXQgYmllbnZlbnVl
+IGNoZXogbm91cyAhDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09DQogDQpUdSB0J2VzIGluc2Ny
+aXQgc3VyIG1vbnNpdGUuZnIgZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZh
+bnQgOiBsYXVyYTQ1QHlvcG1haWwuY29tLg0KIA0KUG91ciBhY2PDqWRlciDD
+oCB0b24gZXNwYWNlIGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHBz
+Oi8vaGVsbG8uY29tLg0KIA0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5m
+ciAhDQo=
+
+----==_mimepart_62a20cdef3607_15ede4b8c9956a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut #&lt;User:0x00007fe6ecb895b8&gt; et bienvenue chez nous !</=
+h1>=0D
+  =0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+s://hello.com.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_62a20cdef3607_15ede4b8c9956a--
+
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:28
+Redirected to http://localhost:3000/orders/28
+Completed 302 Found in 410ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/orders/28" for ::1 at 2022-06-09 17:08:15 +0200
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:23:07 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (359.6ms)
+Completed 200 OK in 635ms (Views: 414.6ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:23:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carts/3" for ::1 at 2022-06-09 17:23:11 +0200
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:11
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mJoinTableItemsCart Load (2.0ms)[0m  [1m[34mSELECT "join_table_items_carts".* FROM "join_table_items_carts" WHERE "join_table_items_carts"."cart_id" = $1[0m  [["cart_id", 3]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:24
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:24
+  Rendered carts/show.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 116ms (Views: 101.9ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/orders" for ::1 at 2022-06-09 17:23:22 +0200
+Processing by OrdersController#create as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[35m (9.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mOrder Create (5.8ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2022-06-09 15:23:22.894898"], ["updated_at", "2022-06-09 15:23:22.894898"], ["user_id", 3]]
+  ↳ app/controllers/orders_controller.rb:28
+  Rendering user_mailer/order_confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.html.erb within layouts/mailer (1.2ms)
+  Rendering user_mailer/order_confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.text.erb within layouts/mailer (1.9ms)
+UserMailer#order_confirmation: processed outbound mail in 34.6ms
+Sent mail to laura45@yopmail.com (285.3ms)
+Date: Thu, 09 Jun 2022 17:23:22 +0200
+From: brian.variengien@gmail.com
+To: laura45@yopmail.com
+Message-ID: <62a2106ae9756_15ede4b8c9985b@mbp-de-eva.home.mail>
+Subject: merci pour ta commande bro
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62a2106ae4e39_15ede4b8c9973a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62a2106ae4e39_15ede4b8c9973a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIzxVc2VyOjB4MDAwMDdmZTZlYTRlNDVlOD4gZXQgYmllbnZlbnVl
+IGNoZXogbm91cyAhDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09DQogDQpUdSB0J2VzIGluc2Ny
+aXQgc3VyIG1vbnNpdGUuZnIgZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZh
+bnQgOiBsYXVyYTQ1QHlvcG1haWwuY29tLg0KIA0KUG91ciBhY2PDqWRlciDD
+oCB0b24gZXNwYWNlIGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IG1vbnNp
+dGUuZnIuDQogDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_62a2106ae4e39_15ede4b8c9973a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut #&lt;User:0x00007fe6ea4e45e8&gt; et bienvenue chez nous !</=
+h1>=0D
+  =0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : mons=
+ite.fr.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_62a2106ae4e39_15ede4b8c9973a--
+
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:28
+Redirected to http://localhost:3000/orders/29
+Completed 302 Found in 389ms (ActiveRecord: 27.5ms)
+
+
+Started GET "/orders/29" for ::1 at 2022-06-09 17:23:23 +0200
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/orders" for ::1 at 2022-06-09 17:28:31 +0200
+Processing by OrdersController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2022-06-09 15:28:31.393741"], ["updated_at", "2022-06-09 15:28:31.393741"], ["user_id", 3]]
+  ↳ app/controllers/orders_controller.rb:28
+  Rendering user_mailer/order_confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.html.erb within layouts/mailer (1.2ms)
+  Rendering user_mailer/order_confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.text.erb within layouts/mailer (1.4ms)
+UserMailer#order_confirmation: processed outbound mail in 36.3ms
+Sent mail to laura45@yopmail.com (374.6ms)
+Date: Thu, 09 Jun 2022 17:28:31 +0200
+From: eva.laurent.78@gmail.com
+To: laura45@yopmail.com
+Message-ID: <62a2119f6fa01_15ede2bc01000d8@mbp-de-eva.home.mail>
+Subject: merci pour ta commande bro
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62a2119f6d7db_15ede2bc099978";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62a2119f6d7db_15ede2bc099978
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIzxVc2VyOjB4MDAwMDdmZTZlY2QxYTJkOD4gZXQgYmllbnZlbnVl
+IGNoZXogbm91cyAhDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09DQogDQpUdSB0J2VzIGluc2Ny
+aXQgc3VyIG1vbnNpdGUuZnIgZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZh
+bnQgOiBsYXVyYTQ1QHlvcG1haWwuY29tLg0KIA0KUG91ciBhY2PDqWRlciDD
+oCB0b24gZXNwYWNlIGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IG1vbnNp
+dGUuZnIuDQogDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_62a2119f6d7db_15ede2bc099978
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut #&lt;User:0x00007fe6ecd1a2d8&gt; et bienvenue chez nous !</=
+h1>=0D
+  =0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : mons=
+ite.fr.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_62a2119f6d7db_15ede2bc099978--
+
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:28
+Redirected to http://localhost:3000/orders/30
+Completed 302 Found in 522ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/orders/30" for ::1 at 2022-06-09 17:28:31 +0200
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 153ms (Views: 148.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/orders" for ::1 at 2022-06-09 17:30:44 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#create as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mOrder Create (2.1ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2022-06-09 15:30:44.826375"], ["updated_at", "2022-06-09 15:30:44.826375"], ["user_id", 3]]
+  ↳ app/controllers/orders_controller.rb:28
+  Rendering user_mailer/order_confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.html.erb within layouts/mailer (1.3ms)
+  Rendering user_mailer/order_confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.text.erb within layouts/mailer (0.4ms)
+UserMailer#order_confirmation: processed outbound mail in 59.1ms
+Sent mail to laura45@yopmail.com (299.7ms)
+Date: Thu, 09 Jun 2022 17:30:44 +0200
+From: eva.laurent.78@gmail.com
+To: laura45@yopmail.com
+Message-ID: <62a21224dcacc_161d42b986195c@mbp-de-eva.home.mail>
+Subject: merci pour ta commande bro
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62a21224da8f7_161d42b986185e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62a21224da8f7_161d42b986185e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIzxVc2VyOjB4MDAwMDdmZjMwZTM2ZDM2MD4gZXQgYmllbnZlbnVl
+IGNoZXogbm91cyAhDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09DQogDQpUdSB0J2VzIGluc2Ny
+aXQgc3VyIG1vbnNpdGUuZnIgZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZh
+bnQgOiBsYXVyYTQ1QHlvcG1haWwuY29tLg0KIA0KUG91ciBhY2PDqWRlciDD
+oCB0b24gZXNwYWNlIGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IG1vbnNp
+dGUuZnIuDQogDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_62a21224da8f7_161d42b986185e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut #&lt;User:0x00007ff30e36d360&gt; et bienvenue chez nous !</=
+h1>=0D
+  =0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : mons=
+ite.fr.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_62a21224da8f7_161d42b986185e--
+
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:28
+Redirected to http://localhost:3000/orders/31
+Completed 302 Found in 473ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/orders/31" for ::1 at 2022-06-09 17:30:45 +0200
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 350ms (Views: 346.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/orders" for ::1 at 2022-06-09 17:57:40 +0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#create as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mOrder Create (13.4ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2022-06-09 15:57:40.527644"], ["updated_at", "2022-06-09 15:57:40.527644"], ["user_id", 3]]
+  ↳ app/controllers/orders_controller.rb:28
+  Rendering user_mailer/order_confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.html.erb within layouts/mailer (1.2ms)
+  Rendering user_mailer/order_confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.text.erb within layouts/mailer (0.5ms)
+UserMailer#order_confirmation: processed outbound mail in 65.5ms
+Sent mail to laura45@yopmail.com (272.4ms)
+Date: Thu, 09 Jun 2022 17:57:40 +0200
+From: eva.laurent.78@gmail.com
+To: laura45@yopmail.com
+Message-ID: <62a21874975db_169132b9851796@mbp-de-eva.home.mail>
+Subject: Merci pour ta commande !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62a21874960b2_169132b9851615";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62a21874960b2_169132b9851615
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIzxVc2VyOjB4MDAwMDdmZjdkNTMwNDk3MD4gZXQgYmllbnZlbnVl
+IGNoZXogbm91cyAhDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09DQogDQpUdSB0J2VzIGluc2Ny
+aXQgc3VyIG1vbnNpdGUuZnIgZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZh
+bnQgOiBsYXVyYTQ1QHlvcG1haWwuY29tLg0KIA0KUG91ciBhY2PDqWRlciDD
+oCB0b24gZXNwYWNlIGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IG1vbnNp
+dGUuZnIuDQogDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_62a21874960b2_169132b9851615
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Merci pour ta commande n=C2=B0 37!</h1>=0D
+  =0D
+    <img src=3D"https://source.unsplash.com/250x250/?kitten?sig=3D30" cla=
+ss=3D"img-fluid">=0D
+    <p>=0D
+      Merci beaucoup pour ta commande :D et =C3=A0 tr=C3=A8s vite !=0D
+    </p>=0D
+   =0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_62a21874960b2_169132b9851615--
+
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:28
+Redirected to http://localhost:3000/orders/37
+Completed 302 Found in 461ms (ActiveRecord: 36.4ms)
+
+
+Started GET "/orders/37" for ::1 at 2022-06-09 17:57:40 +0200
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 312ms (Views: 308.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:58:06 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 132ms (Views: 72.3ms | ActiveRecord: 39.3ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:58:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for ::1 at 2022-06-09 17:58:08 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/BvYEo049OKHRhCBQT2iIFk5SMw+oGgC71CAMhok0fyLtoLdRWsWsBmH47AbzJCj9q7UcPntI7YWHccQJb5qaw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 448ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:58:09 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  Rendered item/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:58:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2022-06-09 17:58:12 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-06-09 17:58:15 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"axtJfmKzlXx4Vntl6OwwwfUnF+5m89CxYOk4v2ud9s3gWGkGFDPeEVI/RT0CeLgRNtyk9nGkj9dscJQvMZk2pQ==", "user"=>{"email"=>"eva.laurent.78@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "eva.laurent.78@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 302 Found in 234ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:58:15 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 17:58:15 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carts/1" for ::1 at 2022-06-09 17:58:19 +0200
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:11
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mJoinTableItemsCart Load (0.4ms)[0m  [1m[34mSELECT "join_table_items_carts".* FROM "join_table_items_carts" WHERE "join_table_items_carts"."cart_id" = $1[0m  [["cart_id", 1]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:24
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:24
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:24
+  Rendered carts/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 61ms (Views: 51.2ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/orders" for ::1 at 2022-06-09 17:58:26 +0200
+Processing by OrdersController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:28
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2022-06-09 15:58:26.255124"], ["updated_at", "2022-06-09 15:58:26.255124"], ["user_id", 1]]
+  ↳ app/controllers/orders_controller.rb:28
+  Rendering user_mailer/order_confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/order_confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/order_confirmation.text.erb within layouts/mailer (0.7ms)
+UserMailer#order_confirmation: processed outbound mail in 16.5ms
+Sent mail to eva.laurent.78@gmail.com (244.8ms)
+Date: Thu, 09 Jun 2022 17:58:26 +0200
+From: eva.laurent.78@gmail.com
+To: eva.laurent.78@gmail.com
+Message-ID: <62a218a246f74_169134830519aa@mbp-de-eva.home.mail>
+Subject: Merci pour ta commande !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62a218a24673f_169134830518bb";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62a218a24673f_169134830518bb
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIzxVc2VyOjB4MDAwMDdmZjdkZDEyYmY2MD4gZXQgYmllbnZlbnVl
+IGNoZXogbm91cyAhDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09DQogDQpUdSB0J2VzIGluc2Ny
+aXQgc3VyIG1vbnNpdGUuZnIgZW4gdXRpbGlzYW50IGwnZS1tYWlsIHN1aXZh
+bnQgOiBldmEubGF1cmVudC43OEBnbWFpbC5jb20uDQogDQpQb3VyIGFjY8Op
+ZGVyIMOgIHRvbiBlc3BhY2UgY2xpZW50LCBjb25uZWN0ZS10b2kgdmlhIDog
+bW9uc2l0ZS5mci4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIg
+IQ0K
+
+----==_mimepart_62a218a24673f_169134830518bb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Merci pour ta commande n=C2=B0 38!</h1>=0D
+  =0D
+    <img src=3D"https://source.unsplash.com/250x250/?kitten?sig=3D24" cla=
+ss=3D"img-fluid">=0D
+    <p>=0D
+      Merci beaucoup pour ta commande :D et =C3=A0 tr=C3=A8s vite !=0D
+    </p>=0D
+   =0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_62a218a24673f_169134830518bb--
+
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:28
+Redirected to http://localhost:3000/orders/38
+Completed 302 Found in 288ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/orders/38" for ::1 at 2022-06-09 17:58:26 +0200
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+=======
+>>>>>>> ccee8232230fa3fc0d93d1cb955a92fff85861df

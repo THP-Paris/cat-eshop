@@ -25,7 +25,7 @@ dump.rdb
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-/.env
+.env
 #Yarn specifics
 .yarn/*
 !.yarn/releases
@@ -33,3 +33,4 @@ yarn-debug.log*
 .pnp.*
 # Ignore Jetbrain's IDE config files
 .idea
+tmp/*
