@@ -19,4 +19,14 @@ class CartsController < ApplicationController
 
   def destroy
   end
+
+  def total 
+    @cart = Cart.find_by(user_id: current_user.id)
+    @total = 0
+    @cart.join_table_cart_items.each do |item|
+      @total = @total + (item.item.price * item.quantity)
+    end
+
+    @cart.update(total: @total)
+  end
 end
