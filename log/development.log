@@ -7039,3 +7039,194 @@ Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
 
 =======
 >>>>>>> ccee8232230fa3fc0d93d1cb955a92fff85861df
+Started GET "/" for ::1 at 2022-06-09 19:17:56 +0200
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/eva/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (105.8ms)
+Completed 200 OK in 620ms (Views: 573.7ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 19:17:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-06-09 19:22:21 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 77ms (Views: 73.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 19:22:24 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 19:22:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-06-09 19:22:35 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 19:22:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-06-09 19:22:45 +0200
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:38
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/item/index.html.erb:65
+  Rendered item/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-06-09 19:22:45 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
