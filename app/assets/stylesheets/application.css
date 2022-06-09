@@ -16,7 +16,5 @@
 
 *= require bootstrap
 *= require cat-eshop_ui_kit
-/* il faut un require vers le thème aussi
-* *= require styles
-*/
+*= require styles
 *= require main
