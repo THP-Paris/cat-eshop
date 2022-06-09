@@ -12358,3 +12358,43 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 161ms (Views: 143.9ms | ActiveRecord: 8.5ms)
 
 
+Started GET "/" for ::1 at 2022-06-09 15:08:15 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/laurence/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:48
+  Rendered item/index.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/laurence/THP/boutique_chats/cat-eshop/app/assets/config
+  /home/laurence/THP/boutique_chats/cat-eshop/app/assets/images
+  /home/laurence/THP/boutique_chats/cat-eshop/app/assets/javascripts
+  /home/laurence/THP/boutique_chats/cat-eshop/app/assets/stylesheets
+  /home/laurence/THP/boutique_chats/cat-eshop/lib/assets/stylesheets
+  /home/laurence/THP/boutique_chats/cat-eshop/vendor/assets/javascripts
+  /home/laurence/THP/boutique_chats/cat-eshop/vendor/assets/stylesheets
+  /home/laurence/.rvm/gems/ruby-2.7.4/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/laurence/.rvm/gems/ruby-2.7.4/gems/actioncable-5.2.8/lib/assets/compiled
+  /home/laurence/.rvm/gems/ruby-2.7.4/gems/activestorage-5.2.8/app/assets/javascripts
+  /home/laurence/.rvm/gems/ruby-2.7.4/gems/actionview-5.2.8/lib/assets/compiled
+  /home/laurence/THP/boutique_chats/cat-eshop/node_modules
+  /home/laurence/THP/boutique_chats/cat-eshop/lib/assets/stylesheets
+  /home/laurence/THP/boutique_chats/cat-eshop/lib/assets/javascripts
+  /home/laurence/THP/boutique_chats/cat-eshop/vendor/assets/stylesheets
+  /home/laurence/THP/boutique_chats/cat-eshop/vendor/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    11:     <link href="main.css"/>
+  
+app/assets/stylesheets/application.css:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2135257637829181197_16340'
