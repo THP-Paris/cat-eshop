@@ -3,10 +3,11 @@ class UserMailer < ApplicationMailer
 
 
     def order_confirmation(order)
+            
             @order = order
             @user = order.user
             @url = 'monsite.fr'
-            mail(to: @user.email, subject: 'merci pour ta commande bro')
+            mail(to: @user.email, subject: 'Merci pour ta commande !')
           
     end
 end
