@@ -47,4 +47,13 @@
     </div>
 
 
-    <%= link_to "Confirmer ma commande", orders_path(@order.id), method: :post %>
+
+        <div class="order-btn text-center">
+                <form action="<%=orders_path%>" method="POST">
+                 <div class="container text-center ">
+            <button type="submit" class="btn btn-submit">Buy Now</button>
+                </form>
+
+        </div>
+
+        
