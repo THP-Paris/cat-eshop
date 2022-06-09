@@ -5,5 +5,10 @@ class Order < ApplicationRecord
     belongs_to :user
     validates :user_id, presence: true
 
+    after_create :order_created
+
+    def order_created
+      UserMailer.order_confirmation(self).deliver_now
+    end
   
 end
