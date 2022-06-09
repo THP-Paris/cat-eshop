@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
   
     puts "*"*40
     puts params 
-    redirect_to order_path(order.id)
+    redirect_to root_path, notice: "Votre commande est passée !"
     
 
  

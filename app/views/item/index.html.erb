@@ -19,6 +19,15 @@
     <body>
         <header class="bg-dark py-5">
         <!-- insérer une photo de background ici-->
+        <div
+        class="p-5 text-center bg-image"
+        style="
+          background-image: url('https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=500&h=150&dpr=2');
+          height: 300px;
+        "
+      >
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Cat-eshop</h1>
@@ -27,49 +36,6 @@
             </div>
         </header>
 
-<h1>Home page </h1>
-
-<% flash.each do |type, msg| %>
-   <div>
-     <%= msg %>
-   </div>
- <% end %>
-
-<% if user_signed_in? %>
-<%= link_to "se déconnecter", destroy_user_session_path, method: :delete %> 
-<% end %></br>
-
-<% if user_signed_in? %>
-
-<%= link_to "voir mon panier", cart_path(current_user.id)%> 
-<% end %></br>
-</br>
-
-<% @items.each do | item | %>
-
-   Titre : <%= item.title %> </br>
-
-Description : <%= item.description %></br>
-
-
-Prix : <%= item.price %> € </br>  </br>
-
-<img src="https://source.unsplash.com/250x250/?kitten?sig=<%=rand(1..50)%>" class="img-fluid"> </br>
-
-<%= link_to "En savoir plus", item_path(item.id) %></br>
-
-<% if user_signed_in? %>
-    <%= form_for @join_table_item_cart do |f| %>
-        
-        <%= f.hidden_field :item_id, value: item.id %>
-        <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-       
-        <button type="submit" class="btn btn-success">Ajouter au panier</button>
-    <% end %>
-<% end %>
-
-</br>
-    <% end %>
 
 
 <section class="py-5">
@@ -80,8 +46,7 @@ Prix : <%= item.price %> € </br>  </br>
                     
                         <div class="card h-100">
                             <!-- Product image-->
-                            <!-- <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />-->
-                            <img class="card-img-top" src="https://source.unsplash.com/250x250/?kitten?sig=<%=rand(1..50)%>" class="img-fluid"/>
+                            <img class="card-img-top" src="https://source.unsplash.com/250x250/?kitten?sig=<%=rand(1..20)%>" class="img-fluid"/>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -89,15 +54,14 @@ Prix : <%= item.price %> € </br>  </br>
                                     <h5 class="fw-bolder"><%= item.title %></h5>
                                     <!-- Product description-->
                                     <%= item.description %>
-                                    <!-- Product price-->
+                                    <!-- Product price--></br>
                                     <%= item.price %> €
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                                <!-- <%= link_to "En savoir plus", item_path(item.id) %> -->
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"<%= link_to "En savoir plus", item_path(item.id) %> </a>
+                                </div>
                             </div>
                         </div>
                     </div>

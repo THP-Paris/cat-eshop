@@ -3,7 +3,7 @@ class JoinTableItemsCartsController < ApplicationController
  
   def create
     @item_add = JoinTableItemsCart.add_or_create_cart_item_link(permit_link_params)
-    redirect_to root_path, notice: "article ajouté au panier"
+    redirect_to root_path, notice: "Article ajouté au panier"
     
   end
 

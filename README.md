@@ -1,32 +1,42 @@
-# README
+# Cateshop <br>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Lien vers le repository original pour voir les pull request et le travail en équipe (https://github.com/cat-eshop/cat-eshop)
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+Le site est en live ici (https://cat-eshop-production.herokuapp.com/)
 
-* Database creation
+Pour une utilisation en local
 
-* Database initialization
+Utilisez la commande suivante avant de lancer le programme 
 
-* How to run the test suite
+```ruby
+ bundle install
+ rails db:create
+ rails db:migrate
+ rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Lancer le programme
 
-* Deployment instructions
+Il ne vous reste plus qu'à tester l'ensemble des fonctionnalités de l'application passer commande, voir les orders, etc.. ! 
 
-* ...
+```ruby
+ rails server 
+```
 
-On crée un conflit car trop d'amour pour la modification de Readme
-<<<<<<< HEAD
-Ce serait bien de rédiger ce Readme
-=======
+Rendez-vous ensuite sur le site en local (http://localhost:3000/)
+Enjoy !
 
-version 2 de la modification
->>>>>>> d675fae (modif #2 du readme)
+
+Rendez-vous ensuite sur le site en local (http://localhost:3000/)
+Enjoy !
+
+
+
+## Crédit 
+[Eva Laurent]<br>
+[Laurence Perdereau]<br>
+[Tahar Toui]<br>
+[Brian Variengien]<br>
